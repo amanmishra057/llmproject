@@ -24,13 +24,5 @@ docker-compose up --build
 
 ## Testing
 To run tests:
-```
-pytest
-```
 
-## Configuration
-- Environment variables are set in `.env`
 
----
-
-For more details, see code comments and docstrings.
