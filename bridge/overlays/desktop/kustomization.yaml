@@ -1,0 +1,12 @@
+#! kustomization.yaml
+# Generated code, do not edit
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+    - ../../base
+patches:
+    - path: api-C:\Users\amanm\Desktop\New folder-persistentVolumeClaim.yaml
+    - path: api-service.yaml
+    - path: db-pgdata-persistentVolumeClaim.yaml
+    - path: db-service.yaml
+    - path: vectordb-service.yaml
