@@ -22,7 +22,7 @@ docker-compose up --build
 - `POST /query` — Query the system
 - `GET /documents` — View processed document metadata
 
-## Testing
-To run tests:
+
+
 
 
