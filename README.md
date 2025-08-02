@@ -9,9 +9,9 @@
 - Docker Compose for deployment
 
 ## Setup
-1. Clone the repo and navigate to the project folder.
+1. Clone the repo 
 2. Build and start services:
-   ```
+
 docker-compose up --build
    ```
 3. The API will be available at `http://localhost:5000`
@@ -20,6 +20,7 @@ docker-compose up --build
 - `POST /upload` — Upload documents
 - `POST /query` — Query the system
 - `GET /documents` — View processed document metadata
+
 
 
 
