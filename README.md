@@ -7,7 +7,6 @@
 - REST API (Flask): upload, query, and view document metadata
 - Metadata stored in PostgreSQL
 - Docker Compose for deployment
-- Unit and integration tests
 
 ## Setup
 1. Clone the repo and navigate to the project folder.
@@ -21,6 +20,7 @@ docker-compose up --build
 - `POST /upload` — Upload documents
 - `POST /query` — Query the system
 - `GET /documents` — View processed document metadata
+
 
 
 
