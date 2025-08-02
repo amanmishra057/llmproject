@@ -1,0 +1,48 @@
+#! api-deployment.yaml
+# Generated code, do not edit
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+    name: api
+    namespace: newfolder
+    labels:
+        com.docker.compose.project: newfolder
+        com.docker.compose.service: api
+spec:
+    replicas: 1
+    selector:
+        matchLabels:
+            com.docker.compose.project: newfolder
+            com.docker.compose.service: api
+    strategy:
+        type: Recreate
+    template:
+        metadata:
+            labels:
+                com.docker.compose.project: newfolder
+                com.docker.compose.service: api
+                com.docker.compose.network.default: "true"
+        spec:
+            containers:
+                - name: rag-api
+                  image: newfolder-api
+                  imagePullPolicy: IfNotPresent
+                  env:
+                    - name: DATABASE_URL
+                      value: "postgresql://raguser:ragpass@db:5432/ragdb"
+                    - name: FLASK_ENV
+                      value: "development"
+                    - name: OPENAI_API_KEY
+                      value: "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"
+                    - name: VECTORDB_URL
+                      value: "http://vectordb:8000"
+                  ports:
+                    - name: api-5000
+                      containerPort: 5000
+                  volumeMounts:
+                    - name: app
+                      mountPath: /app
+            volumes:
+                - name: app
+                  hostPath:
+                    path: C:\Users\amanm\Desktop\New folder

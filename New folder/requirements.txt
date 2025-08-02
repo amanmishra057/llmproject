@@ -1,0 +1,7 @@
+flask
+faiss-cpu
+chromadb
+sqlalchemy
+python-dotenv
+requests
+openai
